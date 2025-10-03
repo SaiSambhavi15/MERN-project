@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fee Details</title>
+    <style>
+         body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #f8f9fa, #e0eafc);
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      width: 90%;
+      margin: 40px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 30px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 16px;
+    }
+
+    th, td {
+      padding: 12px 15px;
+      border-bottom: 1px solid #ddd;
+      text-align: center;
+    }
+
+    th {
+      background-color: rgba(0, 153, 255, 0.656);
+      color: white;
+    }
+
+    tr:hover {
+      background-color: #f1f1f1;
+    }
+
+    .home-btn {
+      display: block;
+      width: 120px;
+      margin: 30px auto 0;
+      padding: 10px 20px;
+      text-align: center;
+      background-color: rgba(0, 153, 255, 0.656);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 16px;
+      transition: background 0.3s ease;
+    }
+
+    .home-btn:hover {
+      background-color: #0056b3;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+    <h2>Fee Details</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Problem</th>
+                
+                <th>Total Deposit</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% fees.forEach(item=> { %>
+                <tr>
+                    <td>
+                        <%= item._id %>
+                    </td>
+                    <td>
+                        <%= item.totalDeposit %>
+                    
+                </tr>
+                <% }) %>
+        </tbody>
+    </table>
+    <a href="hospital.html" class="home-btn"><strong>Home</strong></a>
+</div>
+    
+</body>
+
+</html>
